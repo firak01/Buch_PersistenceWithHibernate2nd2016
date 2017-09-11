@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>TestNG:  Advanced Mappings</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Advanced Mappings</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Sep 09 09:19:37 CEST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>23 seconds (23159 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.advanced.GeneratedProperties.storeLoadLastModified()'><b>storeLoadLastModified</b><br>Test class: org.jpwh.test.advanced.GeneratedProperties</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.jpwh.test.advanced.GeneratedProperties.storeLoadLastModified(GeneratedProperties.java:67)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace6238721", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace6238721'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at org.jpwh.test.advanced.GeneratedProperties.storeLoadLastModified(GeneratedProperties.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+</pre></div></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.GeneratedProperties@128899a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.jpwh.test.advanced.MappedSubselect.loadSubselectEntity()'><b>loadSubselectEntity</b><br>Test class: org.jpwh.test.advanced.MappedSubselect</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.MappedSubselect@1fcc4f8</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.NestedComponents.storeAndLoadUsers()'><b>storeAndLoadUsers</b><br>Test class: org.jpwh.test.advanced.NestedComponents</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.NestedComponents@177b093</td></tr>
+<tr>
+<td title='org.jpwh.test.converter.Converters.storeAndLoadZipcode()'><b>storeAndLoadZipcode</b><br>Test class: org.jpwh.test.converter.Converters</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.converter.Converters@12afd8</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.AccessType.storeLoadAccessType()'><b>storeLoadAccessType</b><br>Test class: org.jpwh.test.advanced.AccessType</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.AccessType@3fc9b6</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.Enum.storeLoadEnum()'><b>storeLoadEnum</b><br>Test class: org.jpwh.test.advanced.Enum</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.Enum@d6a9a4</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.DerivedProperties.storeLoadFormula()'><b>storeLoadFormula</b><br>Test class: org.jpwh.test.advanced.DerivedProperties</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.DerivedProperties@11b5077</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.DerivedProperties.storeLoadFormulaSubselect()'><b>storeLoadFormulaSubselect</b><br>Test class: org.jpwh.test.advanced.DerivedProperties</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.DerivedProperties@11b5077</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.GeneratedProperties.storeLoadInitialPrice()'><b>storeLoadInitialPrice</b><br>Test class: org.jpwh.test.advanced.GeneratedProperties</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.GeneratedProperties@128899a</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.LazyProperties.storeLoadLocator()'><b>storeLoadLocator</b><br>Test class: org.jpwh.test.advanced.LazyProperties</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.LazyProperties@f5498f</td></tr>
+<tr>
+<td title='org.jpwh.test.converter.Converters.storeLoadMonetaryAmount()'><b>storeLoadMonetaryAmount</b><br>Test class: org.jpwh.test.converter.Converters</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.converter.Converters@12afd8</td></tr>
+<tr>
+<td title='org.jpwh.test.converter.UserTypes.storeLoadMonetaryAmount()'><b>storeLoadMonetaryAmount</b><br>Test class: org.jpwh.test.converter.UserTypes</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.converter.UserTypes@620402</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.BooleanOverride.storeLoadOverride()'><b>storeLoadOverride</b><br>Test class: org.jpwh.test.advanced.BooleanOverride</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.BooleanOverride@1b05c30</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.LazyProperties.storeLoadProperties()'><b>storeLoadProperties</b><br>Test class: org.jpwh.test.advanced.LazyProperties</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.LazyProperties@f5498f</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.Temporal.storeLoadTemporal()'><b>storeLoadTemporal</b><br>Test class: org.jpwh.test.advanced.Temporal</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.Temporal@1e776cc</td></tr>
+<tr>
+<td title='org.jpwh.test.advanced.TransformingColumns.storeLoadTransform()'><b>storeLoadTransform</b><br>Test class: org.jpwh.test.advanced.TransformingColumns</td>
+<td></td>
+<td>0</td>
+<td>org.jpwh.test.advanced.TransformingColumns@1e3556a</td></tr>
+</table><p>
+</body>
+</html>

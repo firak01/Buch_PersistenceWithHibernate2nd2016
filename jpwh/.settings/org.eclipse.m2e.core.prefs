@@ -1,0 +1,4 @@
+activeProfiles=app-stateless-server, app-stateless-client, app-stateful-server, app-stateful-client, app-web, examples
+eclipse.preferences.version=1
+resolveWorkspaceProjects=true
+version=1
